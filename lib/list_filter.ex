@@ -7,11 +7,6 @@ defmodule ListFilter do
         :error -> []
       end
     end)
-    |> oddnum()
-  end
-
-  defp oddnum(numlist) do
-    numlist
     |> Enum.count(fn x -> rem(x, 2) == 1 end)
   end
 end
